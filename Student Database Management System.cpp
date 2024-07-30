@@ -138,25 +138,24 @@ void create_database()
   }
   else
   {
-    for(int i=0;i<num_students;i++)
-    {
-        fp<<"Name Of The Student "<<num_students<<"is : "<<new_student.first_name<<new_student.last_name<<endl<<
-        "Student Roll Number is : "<<new_student.roll_number<<endl<<
-        "Student SGPA of SEM 1 is : "<<new_student.sgpa[0]<<endl<<
-        "Student SGPA of SEM 2 is : "<<new_student.sgpa[1]<<endl<<
-        "Student SGPA of SEM 3 is : "<<new_student.sgpa[2]<<endl<<
-        "Student SGPA of SEM 4 is : "<<new_student.sgpa[3]<<endl<<
-        "Student SGPA of SEM 5 is : "<<new_student.sgpa[4]<<endl<<
-        "Student SGPA of SEM 6 is : "<<new_student.sgpa[5]<<endl<<
-        "Student SGPA of SEM 7 is : "<<new_student.sgpa[6]<<endl<<
-        "Student SGPA of SEM 8 is : "<<new_student.sgpa[7]<<endl<<
-        "Student Course ID of SEM 1 is : "<<new_student.course_id[0]<<endl<<
-        "Student Course ID of SEM 2 is : "<<new_student.course_id[1]<<endl<<
-        "Student Course ID of SEM 3 is : "<<new_student.course_id[2]<<endl<<
-        "Student Course ID of SEM 4 is : "<<new_student.course_id[3]<<endl<<
-        "Student Course ID of SEM 5 is : "<<new_student.course_id[4]<<endl<<endl<<endl;
+        fp<<"Name Of The Student "<<num_students<<"is : "<<new_student.first_name<<" "<<new_student.last_name<<endl;
+        fp<<"Student Roll Number is : "<<new_student.roll_number<<endl;
+        for(int i=0;i<8;i++)
+        {
+            if(new_student.sgpa[i]!=0)
+            {
+                fp<<"SGPA Of SEM "<<i+1<<" : "<<new_student.sgpa[i]<<endl;
+            }
+        }
+        for(int i=0;i<5;i++)
+        {
+          if(new_student.course_id[i]!=0)
+          {
+            fp<<"Course ID Of "<<i+1<<" : "<<new_student.course_id[i]<<endl;
+          }
+        }
+        fp<<endl<<endl;
     }
-  }
   fp.flush();
   fp.close();
 }
