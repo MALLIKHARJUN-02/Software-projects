@@ -1,0 +1,15 @@
+// Function to validate string input (replace with more robust validation if needed)
+bool validateString(const string& input) {
+  // Check for empty strings and invalid characters (adjust as needed)
+  return !input.empty() && all_of(input.begin(), input.end(), [](char c) {
+    return isalnum(c) || isspace(c);
+  });
+}
+
+// Function to validate numeric input (replace with more robust validation if needed)
+bool validateNumeric(const string& input) {
+  // Check if the input string contains only digits and a single decimal point (optional)
+  return all_of(input.begin(), input.end(), [](char c) {
+    return isdigit(c) || c == '.';
+  });
+}
