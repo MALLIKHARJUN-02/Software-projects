@@ -1,4 +1,4 @@
-Student Database Management System
+# Student Database Management System
 
 Project Overview:
 The Student Database Management System is a console-based application written in C++. It allows users to manage student records, including creating new records, 
